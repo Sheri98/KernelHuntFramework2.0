@@ -17,34 +17,8 @@ Automated discovery of 0-day vulnerabilities in Windows kernel drivers through s
 ```cmd
 # Run the main Windows executable
 kernelHuntFramework.exe
-
-https://youtu.be/kRfpD0X-E3U
-
-
-# Interactive console menu:
-======================== MAIN MENU ========================
-
-  [1] Analyze Driver (Complete)     - Decompile + IOCTLs + Report + Primitives
-  [2] Batch Analysis                - Analyze multiple drivers sequentially
-  [3] Generate HTML Report          - Create visual security report
-  [4] Detect Exploit Primitives     - Find arbitrary read/write/exec
-  [5] Patch Diff Analyzer           - Compare driver versions (0-day hunter)
-  [6] Live IOCTL Fuzzer             - Test driver IOCTLs in real-time
-  [7] Enumerate Third-Party Drivers - Scan system for drivers
-  [8] Process Security Checker      - Check process privileges/integrity
-  [9] About / Credits               - Framework information
-  [10] Enumerate ALL System Drivers - Scan ALL drivers (inc. Microsoft)
-  [11] Parallel Batch Analysis      - FAST! Use all CPU cores
-  [12] Generate Master Dashboard    - NEW! Aggregate all analyses
-  [13] Driver Loader / Unloader     - Load/unload drivers for testing
-
-  [0] Exit
-
-===============================================================
 ```
-
-**Note:** Compile from `kernelHuntFramework.sln` in Visual Studio
-
+https://youtu.be/kRfpD0X-E3U
 
 ---
 
@@ -68,37 +42,6 @@ https://youtu.be/kRfpD0X-E3U
 | 🔌 **Driver Loader** | Bulk load/unload drivers for testing - supports file lists & directories |
 
 ---
-
-## 📋 How It Works
-
-```
-         ┌──────────────────────────┐
-         │  kernelHuntFramework.exe │  ← Windows Console Application
-         │  (Compiled from C++)     │
-         └────────────┬─────────────┘
-                      │
-         ┌────────────┴─────────────┐
-         │   Interactive Menu       │
-         │  [1] Single  [2] Batch   │
-         └────────────┬─────────────┘
-                      │
-    ╔═════════════════╩═════════════════╗
-    ║  AUTOMATED 4-STEP ANALYSIS        ║
-    ╚═════════════════╦═════════════════╝
-                      │
-    ┌─────────────────┼─────────────────┬─────────────────┐
-    ▼                 ▼                 ▼                 ▼
-┌─────────┐      ┌─────────┐      ┌──────────┐    ┌──────────┐
-│ Step 1  │  →   │ Step 2  │  →   │ Step 3   │ →  │ Step 4   │
-│Decompile│      │ IOCTLs  │      │HTML Rpt  │    │Primitives│
-└─────────┘      └─────────┘      └──────────┘    └──────────┘
-                      │
-                      ▼
-         ┌────────────────────────┐
-         │  Complete Security     │
-         │  Analysis Package      │
-         └────────────────────────┘
-```
 
 ---
 
